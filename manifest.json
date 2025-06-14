@@ -1,0 +1,36 @@
+{
+    "manifest_version": 3,
+    "name": "t3.chat Better Copying",
+    "version": "2025.6.14",
+    "description": "Allows copying formatted text in t3.chat.",
+    "author": "East_Arctica",
+    "icons": {
+        "16": "icons/icon16.png",
+        "19": "icons/icon19.png",
+        "32": "icons/icon32.png",
+        "38": "icons/icon38.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://t3.chat/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_start"
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "injector.js"
+            ],
+            "matches": [
+                "https://t3.chat/*"
+            ]
+        }
+    ]
+}
